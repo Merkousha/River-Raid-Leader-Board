@@ -12,7 +12,8 @@
 <body>
   <div id="start-screen">
     <h1>رودخانه حمله</h1>
-    <input type="text" id="player-name" placeholder="نام خود را وارد کنید" maxlength="20">
+    <div class="subtitle">RIVER RAID</div>
+    <input type="text" id="player-name" placeholder="نام خود را وارد کنید" maxlength="20" autocomplete="off">
     <button id="start-btn">شروع بازی</button>
   </div>
 
@@ -20,7 +21,10 @@
     <canvas id="game-canvas"></canvas>
     <div id="hud">
       <span id="score">امتیاز: 0</span>
-      <span id="fuel">سوخت: 100</span>
+      <div id="fuel-container">
+        <span id="fuel-label">سوخت</span>
+        <div id="fuel-bar-outer"><div id="fuel-bar-inner"></div></div>
+      </div>
     </div>
   </div>
 
