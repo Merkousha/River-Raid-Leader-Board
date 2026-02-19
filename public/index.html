@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>River Raid Leaderboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="start-screen">
+    <h1>رودخانه حمله</h1>
+    <input type="text" id="player-name" placeholder="نام خود را وارد کنید" maxlength="20">
+    <button id="start-btn">شروع بازی</button>
+  </div>
+
+  <div id="game-screen" style="display: none;">
+    <canvas id="game-canvas"></canvas>
+    <div id="hud">
+      <span id="score">امتیاز: 0</span>
+      <span id="fuel">سوخت: 100</span>
+    </div>
+  </div>
+
+  <div id="game-over-screen" style="display: none;">
+    <h2>بازی تمام شد!</h2>
+    <p id="final-score"></p>
+    <button id="play-again-btn">بازی دوباره</button>
+    <button id="leaderboard-btn">لیدربورد</button>
+  </div>
+
+  <div id="leaderboard-screen" style="display: none;">
+    <h2>لیدربورد</h2>
+    <ol id="leaderboard-list"></ol>
+    <button id="back-to-menu-btn">بازگشت</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
