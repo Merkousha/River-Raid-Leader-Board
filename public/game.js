@@ -705,7 +705,9 @@ function updateHUD() {
 function update() {
   if (!gameRunning) return;
   frameCount++;
-  scrollOffset += CONFIG.scrollSpeed;
+  const segH = 20;
+  const scrollWrap = riverSegments.length * segH;
+  scrollOffset = (scrollOffset - CONFIG.scrollSpeed + scrollWrap) % scrollWrap;
   player.updateTilt();
 
   // Spawn enemies
