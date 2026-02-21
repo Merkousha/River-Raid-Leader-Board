@@ -899,7 +899,14 @@ function showLeaderboard() {
       data.forEach((item, index) => {
         const li = document.createElement('li');
         li.style.setProperty('--i', index);
-        li.textContent = `${item.name}: ${item.score}`;
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'leaderboard-name';
+        nameSpan.textContent = item.name;
+        const scoreSpan = document.createElement('span');
+        scoreSpan.className = 'leaderboard-score';
+        scoreSpan.textContent = item.score;
+        li.appendChild(nameSpan);
+        li.appendChild(scoreSpan);
         list.appendChild(li);
       });
       document.getElementById('game-over-screen').style.display = 'none';
