@@ -43,6 +43,17 @@ Server runs at **http://localhost:3000** (or the port set in `PORT`).
 npm run dev
 ```
 
+## Docker
+
+Build and run with Docker (scores persist in a volume):
+
+```bash
+docker build -t river-raid-leaderboard .
+docker run -p 3000:3000 -v river-raid-data:/app/data river-raid-leaderboard
+```
+
+Open **http://localhost:3000**. Use `-v river-raid-data:/app/data` so the SQLite leaderboard survives container restarts.
+
 ## Build
 
 Validate server syntax (no bundling):
